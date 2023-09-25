@@ -1,5 +1,5 @@
 {
-  "name": "loc8r",
+  "name": "house-sitters",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "body-parser": "~1.15.2",
+    "bootstrap": "^5.3.2",
+    "bootswatch": "^5.3.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
     "express": "~4.14.0",
