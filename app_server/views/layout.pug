@@ -3,25 +3,31 @@ html
   head
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/bootstrap0.min.css')
     link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    nav.navbar.fixed-top.navbar-toggleable-md.navbar-inverse
-      .container
-        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarMain')
+    nav.navbar.navbar-expand-lg.bg-primary(data-bs-theme='dark')
+      .container-fluid
+        a.navbar-brand(href='#') House Heroes
+        button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarColor01', aria-controls='navbarColor01', aria-expanded='false', aria-label='Toggle navigation')
           span.navbar-toggler-icon
-        a.navbar-brand(href='/ ') House Sitters
-        #navbarMain.navbar-collapse.collapse
-          ul.navbar-nav.mr-auto
+        #navbarColor01.collapse.navbar-collapse
+          ul.navbar-nav.me-auto
             li.nav-item
-              a.nav-link(href='/about/') About
+              a.nav-link.active(href='/')
+                | Login
+                span.visually-hidden (current)
+            li.nav-item
+              a.nav-link(href='/heroes') Heroes Wanted
+
     .container
       block content
       footer
         .row
           .col-12
-            small &copy; Simon Holmes 2017
+            small &copy; <script>document.write(new Date().getFullYear());</script> House Heroes
     script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js')
     script(src='/javascripts/bootstrap.min.js')

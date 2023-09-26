@@ -1,0 +1,34 @@
+extends layout
+block content
+  .row
+    .col-12
+      h1 #{title}
+    .col-12
+      .card.mb-3
+        h3.card-header Card header
+        .card-body
+          h5.card-title Special title treatment
+          h6.card-subtitle.text-muted Support card subtitle
+        svg.d-block.user-select-none(xmlns='http://www.w3.org/2000/svg', width='100%', height='200', aria-label='Placeholder: Image cap', focusable='false', role='img', preserveaspectratio='xMidYMid slice', viewbox='0 0 318 180', style='font-size:1.125rem;text-anchor:middle')
+          rect(width='100%', height='100%', fill='#868e96')
+          text(x='50%', y='50%', fill='#dee2e6', dy='.3em') Image cap
+        .card-body
+          p.card-text
+            | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+        ul.list-group.list-group-flush
+          li.list-group-item Cras justo odio
+          li.list-group-item Dapibus ac facilisis in
+          li.list-group-item Vestibulum at eros
+        .card-body
+          a.card-link(href='#') Card link
+          a.card-link(href='#') Another link
+        .card-footer.text-muted
+          | 2 days ago
+      .card
+        .card-body
+          h4.card-title Card title
+          h6.card-subtitle.mb-2.text-muted Card subtitle
+          p.card-text
+            | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+          a.card-link(href='#') Card link
+          a.card-link(href='#') Another link
