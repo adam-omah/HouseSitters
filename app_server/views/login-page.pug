@@ -3,5 +3,19 @@ block content
   .row
     .col-12
       h1 #{title}
+  .row
+    .col-md-6
+      form
+        fieldset
+          .form-group
+            label.form-label.mt-4(for='exampleInputEmail1') Email address
+            input#exampleInputEmail1.form-control(type='email', aria-describedby='emailHelp', placeholder='Enter email')
+            small#emailHelp.form-text.text-muted Please use the email you registered with.
+          .form-group
+            label.form-label.mt-2(for='inputPassword') Password
+            input#inputPassword.form-control(type='password', placeholder='Password', autocomplete='off')
+          button.btn.btn-primary(type='submit') Login
+
+
     .col-12
       a.nav-link(href='/register') Not a member? Register here!

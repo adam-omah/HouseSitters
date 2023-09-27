@@ -3,3 +3,21 @@ block content
   .row
     .col-12
       h1 #{title}
+  .row
+    .col-md-6
+      form
+        fieldset
+          .form-group
+            label.col-form-label.mt-4(for='nameInput') Your Name
+            input#nameInput.form-control(type='text', placeholder='Your Name')
+          .form-group
+            label.form-label.mt-2(for='exampleInputEmail1')  Your Email address
+            input#exampleInputEmail1.form-control(type='email', aria-describedby='emailHelp', placeholder='Enter email')
+            small#emailHelp.form-text.text-muted Please use an email you check often.
+          .form-group
+            label.form-label.mt-2(for='inputPassword') Password
+            input#inputPassword.form-control(type='password', placeholder='Password', autocomplete='off')
+          .form-group
+            label.col-form-label.mt-2(for='eircodeInput') Your Eircode
+            input#eircodeInput.form-control(type='text', placeholder='Your Eircode')
+          button.btn.btn-primary(type='submit') Register Now!
