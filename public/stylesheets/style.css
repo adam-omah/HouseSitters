@@ -5,6 +5,8 @@
 @import "~bootswatch/dist/quartz/bootswatch";
 
 
+/* the main style sheet for this project is using the bootstrap theme Quartz from bootswatch found at: https://bootswatch.com/quartz/  */
+
 body {
   font-family: "Cabin", Arial, sans-serif;
   color: #ffffff;

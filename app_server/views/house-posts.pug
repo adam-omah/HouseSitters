@@ -3,57 +3,37 @@ block content
   .row
     .col-12
       h1 #{title}
-    .col-12.col-md-6
-      .card.mb-3
-        h3.card-header House Post title
-        .card-body
-          h5.card-subtitle Sub title
-        .row
-          .col-md-6
-            svg.d-block.user-select-none(xmlns='http://www.w3.org/2000/svg', width='100%', height='200', aria-label='Placeholder: Image cap', focusable='false', role='img', preserveaspectratio='xMidYMid slice', viewbox='0 0 318 180', style='font-size:1.125rem;text-anchor:middle')
-              rect(width='100%', height='100%', fill='#868e96')
-              text(x='50%', y='50%', fill='#dee2e6', dy='.3em') Image cap
-          .col-md-6
-            h6.ps-3.card-subtitle Pets
-            ul.list-group.list-group-flush
-              li.list-group-item Dogs 2
-              li.list-group-item Cats 0
-              li.list-group-item Other Fish
+    each housepost in housePosts
+      .col-12.col-md-6
+        .card.mb-3
+          h3.card-header #{housepost.title} for #{housepost.days} Days.
+          .card-body
+              h5.card-subtitle Starting on the #{housepost.dateStart} <br> #{housepost.address}
 
-        .row.mt-2
-          .col-12
-            h6.ps-3.card-subtitle Job description:
-            .card-body
-              p.card-text
-                House Post description.
-              a.card-link(href='#')
-                button.btn.btn-primary Request Interest.
-            .card-footer.text-muted
-              | 2 days ago, 3 Applicants.
-    .col-12.col-md-6
-      .card.mb-3
-        h3.card-header House Post title
-        .card-body
-          h5.card-subtitle Sub title
-        .row
-          .col-md-6
-            svg.d-block.user-select-none(xmlns='http://www.w3.org/2000/svg', width='100%', height='200', aria-label='Placeholder: Image cap', focusable='false', role='img', preserveaspectratio='xMidYMid slice', viewbox='0 0 318 180', style='font-size:1.125rem;text-anchor:middle')
-              rect(width='100%', height='100%', fill='#868e96')
-              text(x='50%', y='50%', fill='#dee2e6', dy='.3em') Image cap
-          .col-md-6
-            h6.ps-3.card-subtitle Pets
-            ul.list-group.list-group-flush
-              li.list-group-item Dogs 1
-              li.list-group-item Cats 2
-              li.list-group-item Other None
 
-        .row.mt-2
-          .col-12
-            h6.ps-3.card-subtitle Job description:
-            .card-body
-              p.card-text
-                House Post description.
-              a.card-link(href='#')
-                button.btn.btn-primary Request Interest.
-            .card-footer.text-muted
-              | 2 days ago, 3 Applicants.
+          .row
+            .col-md-6
+              img.d-block.user-select-none(src=housepost.imageURL, width='100%', height='200', aria-label='Placeholder: House Image', focusable='false', role='img', preserveaspectratio='xMidYMid slice')
+            .col-md-6
+              h6.ps-3.card-subtitle Pets
+              ul.list-group.list-group-flush
+                li.list-group-item Dogs:
+                  each dog in housepost.dogs
+                    span.badge.rounded-pill.bg-primary.ms-1=dog
+                li.list-group-item Cats:
+                  each cat in housepost.cats
+                    span.badge.rounded-pill.bg-primary.ms-1=cat
+                li.list-group-item Other:
+                  each other in housepost.others
+                    span.badge.rounded-pill.bg-primary.ms-1=other
+
+          .row.mt-2
+            .col-12
+              h6.ps-3.card-subtitle Job description:
+              .card-body
+                p.card-text=housepost.description
+
+                a.card-link(href='#')
+                  button.btn.btn-primary Request Interest.
+              .card-footer.text-muted
+                | Posted on #{housepost.dayPosted}, #{housepost.applicants} Applicants.
