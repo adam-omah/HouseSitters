@@ -4,7 +4,7 @@ block content
     .col-12
       h1 #{title}
   .row
-    .col-md-6
+    .col-lg-6
       form
         fieldset
           .form-group
@@ -17,6 +17,9 @@ block content
           .form-group
             label.form-label.mt-2(for='inputPassword') Password
             input#inputPassword.form-control(type='password', placeholder='Password', autocomplete='off')
+          .form-group
+            label.col-form-label.mt-2(for='phoneInput') Your Mobile Number
+            input#phoneInput.form-control(type='text', placeholder='Phone Number')
           .form-group
             label.col-form-label.mt-2(for='eircodeInput') Your Eircode
             input#eircodeInput.form-control(type='text', placeholder='Your Eircode')
