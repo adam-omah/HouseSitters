@@ -3,43 +3,59 @@
 use HouseSitters
 
 db.housePosts.insert({
-title: 'House1',
+title: "House1",
 days: 5,
-dateStart: ISODate('2023-10-09'),
-imageURL:'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-address: '125 High Street, Reading, RG6 1PS',
+dateStart: ISODate("2023-10-09"),
+imageURL:"https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+address: "125 High Street, Reading, RG6 1PS",
 description: "House 1 lloking for hero for 5 days",
-dogs: ['barky', 'scratchy', 'walky'],
-cats: ['fluffy','snoozey'],
-others: ['swimmy'],
+dogs: ["barky", "scratchy", "walky"],
+cats: ["fluffy","snoozey"],
+others: ["swimmy"],
 applicants: 3,
-dayPosted: ISODate('2022-12-05')
+dayPosted: ISODate("2022-12-05")
 })
 
 db.housePosts.insert({
-title: 'House2',
+title: "House2",
 days: 3,
-dateStart: ISODate('2023-08-05'),
-imageURL:'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-address: '125 High Street, Reading, RG6 1PS',
+dateStart: ISODate("2023-08-05"),
+imageURL:"https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+address: "125 High Street, Reading, RG6 1PS",
 description: "House 2 looking for hero for 3 days",
-dogs: ['barky'],
-cats: ['snoozey'],
-others: ['horse: speedy'],
+dogs: ["barky"],
+cats: ["snoozey"],
+others: ["horse: speedy"],
 applicants: 1,
-dayPosted: ISODate('2023-11-11')
+dayPosted: ISODate("2023-11-11")
 })
 
 db.housePosts.insert({
-title:'House3',
+title:"House3",
 days:7,
-dateStart:ISODate('2023-09-19'),
-imageURL:'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-address:'125 High Street, Reading, RG6 1PS',
+dateStart:ISODate("2023-09-19"),
+imageURL:"https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+address:"125 High Street, Reading, RG6 1PS",
 description: "House 3 looking for hero for 7 days",
-dogs:['barky', 'scratchy', 'Snoopy'],
+dogs:["barky", "scratchy", "Snoopy"],
 cats:[],
-others:['fluffy'],
+others:["fluffy"],
 applicants: 5,
-dayPosted: ISODate('2023-05-05')
+dayPosted: ISODate("2023-05-05")
 })
+
+db.clients.insert({
+  name:"adam",
+  email:"adam@test.com",
+  phone:"+353780554875"
+  password: "1234567",
+  eircode: "v92b1u2"
+  })
+
+db.clients.insert({
+  name:"john",
+  email:"john@test.com",
+  phone:"+353780654875",
+  password: "1234567",
+  eircode: "v92b1u2"
+  })
