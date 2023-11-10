@@ -8,7 +8,7 @@ block content
         .card.mb-3
           h3.card-header #{housepost.title} for #{housepost.days} Days.
           .card-body
-              h5.card-subtitle Starting on the #{housepost.dateStart} <br> #{housepost.address}
+              h5.card-subtitle Starting on the #{housepost.startDate} <br> #{housepost.address}
 
 
           .row
@@ -30,7 +30,7 @@ block content
           .row.mt-2
             .col-12
               h6.ps-3.card-subtitle Job description:
-              .card-body
+              .card-body.pt-1
                 p.card-text=housepost.description
 
                 a.card-link(href='#')

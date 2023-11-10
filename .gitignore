@@ -30,3 +30,4 @@ node_modules
 npm-debug.log
 
 app_server/models/db.js
+app_api/models/db.js
