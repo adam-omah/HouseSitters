@@ -1,8 +1,5 @@
 @import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
-@import "bootswatch/dist/quartz/bootstrap.min.css";
-@import "~bootswatch/dist/quartz/variables";
-@import "~bootstrap/scss/bootstrap";
-@import "~bootswatch/dist/quartz/bootswatch";
+
 
 
 /* the main style sheet for this project is using the bootstrap theme Quartz from bootswatch found at: https://bootswatch.com/quartz/  */

@@ -1,3 +1,11 @@
+const apiOptions = {
+server : 'http://localhost:3000'
+};
+if (process.env.NODE_ENV === 'production') {
+apiOptions.server = 'https://wsrender.onrender.com';
+}
+
+
 /* GET 'login' page */
 const loginPage = function(req, res){
 res.render('login-page', { title: 'Login' });
