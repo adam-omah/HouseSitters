@@ -6,11 +6,14 @@ const ctrlLogin = require('../controllers/login')
 const ctrlHouse = require('../controllers/housePosts')
 
 /* Login pages */
-router.get('/', ctrlLogin.loginPage);
+
+router.get('/login', ctrlLogin.loginPage);
 router.get('/register', ctrlLogin.registerPage);
 
 /* Heroes pages */
-router.get('/housePosts', ctrlHouse.housePosts);
+router.get('/', ctrlHouse.housePosts);
+
+
 
 
 module.exports = router;

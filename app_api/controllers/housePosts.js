@@ -8,6 +8,7 @@ const Post = mongoose.model('housePost');
 const apiOptions = {
 server : 'http://localhost:3000'
 };
+
 if (process.env.NODE_ENV === 'production') {
 apiOptions.server = 'https://wsrender.onrender.com';
 }

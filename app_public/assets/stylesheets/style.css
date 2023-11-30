@@ -1,0 +1,33 @@
+@import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
+
+
+/* the main style sheet for this project is using the bootstrap theme Quartz from bootswatch found at: https://bootswatch.com/quartz/  */
+
+body {
+  font-family: "Cabin", Arial, sans-serif;
+  color: #ffffff;
+  background-color: #108a93;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lobster', cursive;
+}
+
+h1 small {
+  color: #aaa;
+}
+
+h4 a, h4 a:hover {
+  color: #fff;
+}
+
+h4 small {
+  font-size: 60%;
+  line-height: 200%;
+  color: #aaa;
+}
+
+
+legend {
+  font-family: 'Lobster', cursive;
+}
