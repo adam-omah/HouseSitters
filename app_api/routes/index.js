@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+const Account = require('../models/heroes');
+
 const ctrlHouse = require('../controllers/housePosts')
 const ctrlHero = require('../controllers/heroes')
 
@@ -21,6 +23,8 @@ router
   .route('/heroes')
   .get(ctrlHero.heroReadOne)
   .post(ctrlHero.heroCreate);
+
+
 
 
 module.exports = router;

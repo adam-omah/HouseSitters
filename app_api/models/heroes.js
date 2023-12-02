@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
+const passportLocalMongoose = require('passport-local-mongoose');
 
-const heroSchema = new mongoose.Schema({
+
+const Hero = new mongoose.Schema({
   name: {type: String, required: true},
   email: {type: String, required: true},
   password: {type: String, required: true},
@@ -8,4 +10,6 @@ const heroSchema = new mongoose.Schema({
   eircode: {type: String, required: true}
 });
 
-mongoose.model('hero', heroSchema, 'heroes');
+Hero.plugin(passportLocalMongoose);
+
+mongoose.model('hero', Hero);
