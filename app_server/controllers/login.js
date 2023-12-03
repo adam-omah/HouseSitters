@@ -8,7 +8,7 @@ apiOptions.server = 'https://wsrender.onrender.com';
 
 /* GET 'login' page */
 const loginPage = function(req, res){
-  res.render('login-page', { title: 'Login' });
+  res.render('login', { title: 'Login' });
 };
 /* GET 'registration' page */
 const registerPage = function(req, res){

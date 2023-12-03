@@ -1,16 +1,32 @@
 extends layout
 
 block content
-  .container
-    h1 Register Page
-    p.lead Say something worthwhile here.
-    pre #{error}
-    br
-    form(role='form', action="/register",method="post", style='max-width: 300px;')
-      .form-group
-          input.form-control(type='text', name="username", placeholder='Enter Username')
-      .form-group
-        input.form-control(type='password', name="password", placeholder='Password')
-      button.btn.btn-default(type='submit') Submit
-      a(href='/')
-        button.btn.btn-primary(type="button") Cancel
+  .container.mb-0
+    if (!user)
+      h1.mb-0 Register today!
+    if (user)
+      h1.mb-0 Registration Page.
+      p You are currently logged in as #{user.username}
+      a(href="/logout") Logout
+    pre.mb-0 #{error}
+    .row.mt-0
+      .col-lg-8.mt-0
+        form(role='form', action="/register",method="POST")
+            .form-group.m-0
+              label.col-form-label.mt-1(for='name') Your Name
+              input#name.form-control(type='text', name="name", placeholder='Your Name')
+            .form-group.m-0
+                label.form-label.mt-1(for='username')  Your Email address (Username)
+                input#username.form-control(type='email', name="username", placeholder='Enter Email Address')
+            .form-group.m-0
+              label.form-label.mt-1(for='password') Password
+              input#password.form-control(type='password', name="password", placeholder='Password')
+            .form-group.m-0
+              label.form-label.mt-1(for='phone') Your Mobile Number
+              input#phone.form-control(type='text', name="phone", placeholder='Your Phone Number')
+            .form-group.m-0
+              label.form-label.mt-1(for='eircode') Your Eircode / Zip Code.
+              input#eircode.form-control(type='text', name="eircode", placeholder='Enter Eircode')
+            button.btn.btn-primary.m-1(type='submit') Submit
+            a(href='')
+            button.btn.btn-primary.m-1(type="reset") Cancel

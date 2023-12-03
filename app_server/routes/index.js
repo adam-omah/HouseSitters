@@ -8,24 +8,30 @@ const Account = require('../../app_api/models/account');
 const ctrlLogin = require('../controllers/login')
 const ctrlHouse = require('../controllers/housePosts')
 
-/* Login pages */
+const ctrlHomepage= require('../controllers/homePage')
 
-router.get('/login', ctrlLogin.loginPage);
-router.get('/register', ctrlLogin.registerPage);
+/* Login pages before authenticate added. */
+//
+// router.get('/login', ctrlLogin.loginPage);
+// router.get('/register', ctrlLogin.registerPage);
 
 /* HousePost pages */
 router.get('/', ctrlHouse.housePosts);
 
 
 /* Passport Integration */
+
+router.get('/login', (req, res) => {
+    res.render('login', { user : req.user, error : req.flash('error')});
+});
+
+
 router.post('/login', passport.authenticate('local', { failureRedirect: '/login', failureFlash: true }), (req, res, next) => {
     req.session.save((err) => {
         if (err) {
             return next(err);
-        }else {
-          res.status(202);
         }
-
+        res.redirect('/');
     });
 });
 
@@ -44,13 +50,13 @@ router.get('/logout', (req, res, next) => {
     });
 });
 
-router.get('/register2', (req, res) => {
+router.get('/register', (req, res) => {
     res.render('register', { });
 });
 
-router.post('/register2', (req, res, next) => {
+router.post('/register', (req, res, next) => {
     Account.register(new Account({
-      username : req.body.email,
+      username : req.body.username,
       name: req.body.name,
       eircode: req.body.eircode,
       phone: req.body.phone
@@ -60,7 +66,7 @@ router.post('/register2', (req, res, next) => {
         }else{
           res
           .status(200)
-          .json(account);
+          .redirect('/login')
         }
     });
 });
