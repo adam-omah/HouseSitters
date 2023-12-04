@@ -1,12 +1,26 @@
 extends layout
-
 block content
   .row
-    .col-12.col-md-8
-      .error= message
-
-  app-house-post-list Loading
-
-block scripts
-      script(src='polyfills-LZBJRJJE.js')
-      script(src='main-NW7NGJE3.js')
+    .col-12
+      h1 #{title}
+    each housepost in housePosts
+      .col-12.col-lg-6
+        .card.mb-3
+          h3.card-header #{housepost.title} for #{housepost.days} Days.
+          .card-body
+              h5.card-subtitle Starting on the #{housepost.startDate} <br> #{housepost.address}
+          .row
+            .col-md-6
+              img.d-block.user-select-none(src=housepost.imageURL, width='100%', height='200', aria-label='Placeholder: House Image', focusable='false', role='img', preserveaspectratio='xMidYMid slice')
+            .col-md-6
+              h6.ps-3.card-subtitle Pets
+              ul.list-group.list-group-flush
+                li.list-group-item Dogs:
+                  each dog in housepost.dogs
+                    span.badge.rounded-pill.bg-primary.ms-1=dog
+                li.list-group-item Cats:
+                  each cat in housepost.cats
+                    span.badge.rounded-pill.bg-primary.ms-1=cat
+                li.list-group-item Other:
+                  each other in housepost.others
+                    span.badge.rounded-pill.bg-primary.ms-1=other

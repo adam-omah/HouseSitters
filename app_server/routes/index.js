@@ -16,7 +16,7 @@ const ctrlHomepage= require('../controllers/homePage')
 // router.get('/register', ctrlLogin.registerPage);
 
 /* HousePost pages */
-router.get('/', ctrlHouse.housePosts);
+router.get('/houseposts', ctrlHouse.housePosts);
 
 
 /* Passport Integration */

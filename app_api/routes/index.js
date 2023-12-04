@@ -23,8 +23,4 @@ router
   .route('/heroes')
   .get(ctrlHero.heroReadOne)
   .post(ctrlHero.heroCreate);
-
-
-
-
 module.exports = router;

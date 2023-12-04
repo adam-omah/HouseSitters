@@ -11,7 +11,7 @@ apiOptions.server = 'https://house-sitters.onrender.com';
 
 const _renderHomepage = function(req, res, responseBody){
 res.render('house-posts', {
-title: 'Loc8r - find a place to work with wifi',
+title: 'Find a House Sitting Job Today!',
 housePosts: responseBody
 });
 };
